@@ -19,6 +19,15 @@ export const resolvers = {
       } catch(err) {
         return err
       }
+    },
+    updateFriend: async (root, {input}) => {
+      try {
+        const updateFriend = await  Friend.findOneAndUpdate(input._id, input,{new: true});
+
+        return updateFriend
+      } catch(err) {
+        return err
+      }
     }
   }
 
