@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
 // create our db and connect
-mongoose.connect('mongodb://localhost/friends', {
-  useMongoClient: true
-});
+mongoose.connect('mongodb://localhost/friends', { useNewUrlParser: true });
 
 mongoose.connection.on('connected', () => {
   console.log('mongoose is connected');

@@ -1,4 +1,4 @@
-import mongoose from ('mongoose');
+import mongoose from 'mongoose';
 import Friend from '../models/friend';
 
 
@@ -10,7 +10,7 @@ export const resolvers = {
     }
   },
   Mutation: {
-    createFriend: async ({input}) => {
+    createFriend: async (root, {input}) => {
       try {
         const newFriend = await Friend.create(input);
 
