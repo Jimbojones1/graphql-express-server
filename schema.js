@@ -10,6 +10,12 @@ const schema = buildSchema(`
     language: String
     email: String
     age: Int
+    contacts: [Contact]
+  }
+
+  type Contact {
+    firstName: String
+    lastName: String
   }
 
   type Query {
@@ -22,6 +28,11 @@ const schema = buildSchema(`
     DINOSAUR
   }
 
+  input ContactInput {
+    firstName: String
+    lastName: String
+  }
+
   input FriendInput {
     id: ID
     firstName: String
@@ -30,7 +41,10 @@ const schema = buildSchema(`
     language: String
     email: String
     age: Int
+    contacts: [ContactInput]
   }
+
+
 
   type Mutation {
     createFriend(input: FriendInput): Friend

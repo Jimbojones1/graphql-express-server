@@ -1,5 +1,5 @@
 class Friend {
-  constructor(id, { firstName, lastName, gender, email, language, age}){
+  constructor(id, { firstName, lastName, gender, email, language, age, contacts}){
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -7,6 +7,7 @@ class Friend {
     this.email = email;
     this.language = language;
     this.age      = age;
+    this.contacts = contacts;
   }
 }
 
