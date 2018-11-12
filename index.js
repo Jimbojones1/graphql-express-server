@@ -17,7 +17,7 @@ const roote = { friend: () => {
     "lastName": 'Haff',
     "gender": 'Male',
     "language": 'AMERICAN',
-    "email": 'woah.com'
+    "emails": [{email: 'woah.com'},{email: 'taco.com'}]
   }
 }};
 
