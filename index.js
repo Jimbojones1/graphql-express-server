@@ -10,7 +10,16 @@ app.get('/', (req, res) => {
 });
 
 
-const roote = {hello: () => 'Hi Im larry'};
+const roote = { friend: () => {
+  return {
+    "id": 28143,
+    "firstName": 'Jim',
+    "lastName": 'Haff',
+    "gender": 'Male',
+    "language": 'AMERICAN',
+    "email": 'woah.com'
+  }
+}};
 
 
 app.use('/graphql', graphqlHTTP({
