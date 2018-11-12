@@ -6,7 +6,7 @@ const schema = buildSchema(`
     id: ID
     firstName: String
     lastName: String
-    gender: String
+    gender: Gender
     language: String
     email: String
     age: Int
@@ -16,11 +16,17 @@ const schema = buildSchema(`
     getFriend(id: ID): Friend
   }
 
+  enum Gender {
+    MALE
+    FEMALE
+    DINOSAUR
+  }
+
   input FriendInput {
     id: ID
     firstName: String
     lastName: String
-    gender: String
+    gender: Gender
     language: String
     email: String
     age: Int
