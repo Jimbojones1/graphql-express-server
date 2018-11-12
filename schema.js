@@ -9,6 +9,7 @@ const schema = buildSchema(`
     gender: String
     language: String
     email: String
+    age: Int
   }
 
   type Query {
@@ -22,6 +23,7 @@ const schema = buildSchema(`
     gender: String
     language: String
     email: String
+    age: Int
   }
 
   type Mutation {
