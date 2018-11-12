@@ -28,6 +28,15 @@ export const resolvers = {
       } catch(err) {
         return err
       }
+    },
+    deleteFriend: async (id) => {
+      try {
+        await Friend.findOneAndDelete(id)
+
+        return 'Friend has been deleted'
+      } catch(err){
+        return err
+      }
     }
   }
 
