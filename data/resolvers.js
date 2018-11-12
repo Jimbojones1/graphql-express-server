@@ -4,9 +4,29 @@ import Friend from '../models/friend';
 
 export const resolvers = {
   Query: {
-    getFriend: ({id}) => {
-      return friendDatabase[id]
+    getOneFriend: async (root, {id}) => {
+      console.log(root,' dskljfldsj')
+      try {
+        console.log(id, ' this is id')
+        const foundFriend = await Friend.findById(id);
+        console.log(foundFriend, 'this is foundFriend')
+        return foundFriend;
+
+      } catch(err) {
+        console.log(err, ' this is')
+        return err
+      }
       // return new Friend(id, friendDatabase[id])
+    },
+    getFriends: async () => {
+      try {
+        const friends = await Friend.find();
+
+        return friends;
+
+      } catch(err){
+        return err
+      }
     }
   },
   Mutation: {
