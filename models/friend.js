@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const friendSchema = mongoose.Schema({
+const friendSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     gender: String,

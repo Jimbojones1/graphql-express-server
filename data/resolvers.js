@@ -5,11 +5,11 @@ import Friend from '../models/friend';
 export const resolvers = {
   Query: {
     getOneFriend: async (root, {id}) => {
-      console.log(root,' dskljfldsj')
+
       try {
-        console.log(id, ' this is id')
+
         const foundFriend = await Friend.findById(id);
-        console.log(foundFriend, 'this is foundFriend')
+
         return foundFriend;
 
       } catch(err) {
